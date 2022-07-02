@@ -7,13 +7,13 @@ passInput.addEventListener("input" ,handlePassInput );
 toggleIcon.addEventListener("click",togglePassInput);
 
 function handlePassInput(e){
-    if(passInput.ariaValueMax.length===0){
+    if(passInput.value.length===0){
         passLabel.innerHTML="strength ";
         addClass();
-    }else if(passInput.ariaValueMax.length<=4 ){
+    }else if(passInput.value.length<=4 ){
         passLabel.innerHTML="weak"
         addClass("weak");
-    }else if(passInput.ariaValueMax.length<=7 ){
+    }else if(passInput.value.length<=7 ){
         passLabel.innerHTML="Not bad"
         addClass("average");
     }else{
@@ -35,17 +35,17 @@ function togglePassInput(e){
     const type =passInput.getAttribute("type");
     if(type==="password" ){
         passInput.setAttribute("type","text");
-        toggleIcon.innerHTML="☠ ";
-        ripple.getElementsByClassName.cssText=`
+        toggleIcon.innerHTML="☠";
+        ripple.style.cssText=`
         border-radius:4px;
         width:100%;
         height:100%;
         right:0;
         z-index:-1;
         `;
-        passInput.getElementsByClassName.color="#000";
-        passInput.getElementsByClassName.background="transparent";
-        toggleIcon.getElementsByClassName.fontSize="27px";
+        passInput.style.color="#000";
+        passInput.style.background="transparent";
+        toggleIcon.style.fontSize="27px";
 
     }else{
         passInput.setAttribute("type","password");
@@ -53,11 +53,10 @@ function togglePassInput(e){
         toggleIcon.style.fontSize="25px";
         ripple.style.cssText=`
         border-radius: 50%;
-  height: 35px;
-  width: 35px;
-  right: 20px;
-  z-index: 1;
-        `;
+        height: 35px;
+        width: 35px;
+       right: 20px;
+       z-index: 1;`;
         passInput.style.color="#fff";
         passInput.style.background="#112d37";
 
