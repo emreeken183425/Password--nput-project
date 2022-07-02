@@ -1,0 +1,98 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    height: 100vh;
+    background: #460b2b;
+    color: #fff;
+    display: grid;
+    place-content: center;
+}
+.input-container{
+    width: 300px;
+}
+.input-group{
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.input-group input {
+    padding: 15px 3rem 15px 15px;
+    width: 100%;
+    background: #112d37 ;
+    outline: none;
+    border: 1px solid #215164 ;
+    border-radius: 4px;
+    color:whitesmoke;
+    transition: width 0.9s,height 0.9s,border-radius 0.9s ;
+    font-size: 16px;
+}
+.input-group input::placeholder{
+    color:#eff8fc
+}
+.input-group input:focus {
+    border: 2px solid rgb(36, 212, 36) ;
+    box-shadow: 0 0 2px 2px #eb932034 ;
+
+}
+.input-group .toggle{
+    position: absolute;
+    right: 20px;
+    font-size: 25px;
+    z-index: 99;
+    cursor: pointer;
+  
+}
+.input-group .toggle:hover{
+    font-size: 50px;
+    transition: 0.8s;
+    transform: rotate(-45deg);
+}
+.input-group .ripple{
+    width: 35px;
+    height: 35px;
+    background:rgb(202, 179, 179)  ;
+    display: block;
+    position: absolute;
+    right: 15px;
+    z-index: 1;
+    transition: all 0.2s;
+    border-radius: 50%;
+}
+.pass-strenght{
+    display: flex;
+    align-items: center;
+    margin-top: 3px;
+}
+.strenght-label{
+font-size: 12px;
+margin-left: 10px;
+}
+.strenght-percent{
+    flex: 1;
+    height: 5px;
+    border-radius: 10px;
+    display: block;
+    background: #eee;
+}
+.strenght-percent span{
+    display: block;
+    height: 100%;
+    transition: all 0.5s;
+    border-radius: 10px;
+}
+
+.weak{
+    background: #eff8fc;
+    width: 33%;
+}
+.average{
+    background-color: #ffd000;
+    width: 66%;
+}
+.strong{
+    background: green;
+    width: 100%;
+}
