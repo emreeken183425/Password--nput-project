@@ -61,23 +61,23 @@ body{
     transition: all 0.2s;
     border-radius: 50%;
 }
-.pass-strenght{
+.pass-strength{
     display: flex;
     align-items: center;
     margin-top: 3px;
 }
-.strenght-label{
+.strength-label{
 font-size: 12px;
 margin-left: 10px;
 }
-.strenght-percent{
+.strength-percent{
     flex: 1;
     height: 5px;
     border-radius: 10px;
     display: block;
     background: #eee;
 }
-.strenght-percent span{
+.strength-percent span{
     display: block;
     height: 100%;
     transition: all 0.5s;
@@ -96,3 +96,4 @@ margin-left: 10px;
     background: green;
     width: 100%;
 }
+
